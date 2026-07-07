@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* PIPS brand tokens — the single source of truth for every color on the site */
+  --pips-green: #27ae60;
+  --pips-green-dark: #1e8449;
+  --pips-green-deep: #145a32;
+  --pips-white: #ffffff;
+  --pips-off-white: #f4faf6;
+  --pips-mint: #e8f5ef;
+  --pips-gold: #d4a017;
+  --pips-charcoal: #1c1c1c;
+  --pips-mid-grey: #6b7280;
+  --pips-border: #d1f0dc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+body {
+  background: var(--pips-white);
+  color: var(--pips-charcoal);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--pips-green);
+  outline-offset: 3px;
+}
